@@ -1,0 +1,17 @@
+<h1>NGXS Tests</h1>
+<p>So, hi.</p>
+
+<button type="button" (click)="addRandomItem()">Add Random Item</button>
+
+<button type="button" (click)="changeRandomItem()">Change Random Item</button>
+
+<ng-container *ngFor="let item of items$ | async">
+    <item [id]="item.id"></item>
+    <!-- <div>
+        <span>{{ item.name }}</span>
+        {{ " " }}
+        <span>{{ item.price }}</span>
+        {{ " " }}
+        <span>{{ item.currency }}</span>
+    </div> -->
+</ng-container>

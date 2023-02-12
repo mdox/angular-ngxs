@@ -1,0 +1,14 @@
+<ng-template let-item #itemTemplate>
+    <div *ngIf="item">
+        <span>{{ item.name }}</span>
+        {{ " " }}
+        <span>{{ item.price }}</span>
+        {{ " " }}
+        <span>{{ item.currency }}</span>
+    </div>
+</ng-template>
+
+<ng-container
+    [ngTemplateOutlet]="itemTemplate"
+    [ngTemplateOutletContext]="{ $implicit: item$ | async }"
+></ng-container>
